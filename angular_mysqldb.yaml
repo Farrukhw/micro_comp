@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  web: # this would become the DNS name of the container in dice.net network
-    image: farrukhw/dice:ang_jsp
+  webapp: # this would become the DNS name of the container in dice.net network
+    image: farrukhw/dice:webapp_tomcat
     init: true
     restart: always
     networks:
