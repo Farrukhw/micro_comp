@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   webapp: # this would become the DNS name of the container in dice.net network
-    image: farrukhw/dice:webapp_tomcat
+    image: farrukhw/webapp_tomcat
     init: true
     restart: always
     networks:
@@ -15,7 +15,7 @@ services:
     - 9000-9004:8080
 
   mysql_db: # this would become the DNS name of the container in dice.net network
-    image: farrukhw/dice:mysql_db
+    image: farrukhw/mysql_db
     init: true
     command: --default-authentication-plugin=mysql_native_password
     restart: always
